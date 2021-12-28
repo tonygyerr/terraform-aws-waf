@@ -97,3 +97,8 @@ variable "app_name" {
   description = "Application Name"
   default     = ""
 }
+
+variable "environment" {
+  type    = string
+  default = ""
+}

@@ -65,3 +65,7 @@ variable "deploy_env_map" {
   }
 }
 
+variable "environment" {
+  type    = string
+  default = ""
+}

@@ -12,6 +12,7 @@ module "waf" {
   alb_arn               = data.aws_lb.this.arn
   associate_alb         = true
   aws_region            = var.aws_region
+  environment           = var.environment
   profile               = var.profile
   blocked_path_prefixes = ["/admin", "/password"]
   allowed_hosts         = ["apples", "oranges"]
