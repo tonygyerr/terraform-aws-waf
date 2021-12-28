@@ -6,7 +6,7 @@ resource "aws_wafregional_rate_based_rule" "ipratelimit" {
 }
 
 module "waf" {
-  source = "../"
+  source = "git::https://github.com/tonygyerr/terraform-aws-waf.git"
 
   alb_arn       = data.aws_lb.this.arn
   associate_alb = true
