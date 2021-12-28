@@ -15,7 +15,7 @@ module "waf" {
   environment           = var.environment
   profile               = var.profile
   blocked_path_prefixes = ["/admin", "/password"]
-  allowed_hosts         = ["apples", "oranges"]
+  allowed_hosts         = ["apples", "oranges"] 
   rate_based_rules      = [aws_wafregional_rate_based_rule.ipratelimit.id]
   web_acl_name          = "${var.app_name}-wacl"
   web_acl_metric_name   = "${var.app_name}-wacl-metric"
