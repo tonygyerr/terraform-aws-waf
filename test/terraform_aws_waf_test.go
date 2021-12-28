@@ -13,7 +13,7 @@ import (
 func TestTerraformAwsWaf(t *testing.T) {
 	t.Parallel()
 
-	awsRegion := "us-west-2"
+	awsRegion := "us-east-1"
 	wafName := strings.ToLower(random.UniqueId())
 	wafACLName := fmt.Sprintf("waf-%s", wafName)
 	wafACLMetricName := fmt.Sprintf("waf%s", wafName)
@@ -21,7 +21,7 @@ func TestTerraformAwsWaf(t *testing.T) {
 
 	terraformOptions := &terraform.Options{
 
-		TerraformDir: "../examples/simple/",
+		TerraformDir: "../examples",
 		Vars: map[string]interface{}{
 			"waf_acl_name":        wafACLName,
 			"waf_acl_metric_name": wafACLMetricName,

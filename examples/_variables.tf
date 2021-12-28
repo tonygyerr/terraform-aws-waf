@@ -1,3 +1,15 @@
+variable "aws_region" {
+  description = "ec2 region for the vpc"
+  type        = string
+  default     = ""
+}
+
+variable "profile" {
+  description = "The name of the aws profile"
+  type        = string
+  default     = ""
+}
+
 variable "alb_arn" {
   description = "ARN of the Application Load Balancer (ALB) to be associated with the Web Application Firewall (WAF) Access Control List (ACL)."
   type        = string
@@ -17,13 +29,9 @@ variable "web_acl_metric_name" {
 }
 
 variable "waf_acl_name" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
-
-# variable "vpc_azs" {
-#   type = list(string)
-# }
 
 variable "private_subnets" {
   description = "list of private subnets for application and database layer"
