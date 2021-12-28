@@ -7,7 +7,7 @@ data "aws_caller_identity" "current" {}
 data "aws_vpc" "api" {
   filter {
     name   = "tag:Name"
-    values = [var.vpc_name]
+    values = [var.app_name]
   }
 }
 
