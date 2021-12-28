@@ -21,9 +21,9 @@ variable "waf_acl_name" {
   default     = ""
 }
 
-variable "vpc_azs" {
-  type = list(string)
-}
+# variable "vpc_azs" {
+#   type = list(string)
+# }
 
 variable "private_subnets" {
   description = "list of private subnets for application and database layer"

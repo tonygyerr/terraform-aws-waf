@@ -3,7 +3,7 @@ provider "aws" {
   profile = var.profile
 }
 
-# terraform {
-#   backend "s3" {
-#   }
-# }
+terraform {
+  backend "s3" {
+  }
+}
