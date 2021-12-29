@@ -4,12 +4,6 @@ variable "aws_region" {
   default     = ""
 }
 
-variable "allowed_hosts" {
-  description = "list of allowed hosts"
-  type        = list(string)
-  default     = []
-}
-
 variable "profile" {
   description = "The name of the aws profile"
   type        = string
