@@ -24,3 +24,11 @@ output "ipset_bad-bot-v6_id" {
 output "waf_rate_based_rule" {
   value = aws_wafregional_rate_based_rule.ipratelimit.id
 }
+
+output "waf_sqs_dead_letter_arn" {
+  value = aws_sqs_queue.deadletter.arn
+}
+
+output "waf_sqs_arn" {
+  value = aws_sqs_queue.waf.arn
+}
