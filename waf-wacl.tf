@@ -87,4 +87,4 @@ resource "aws_wafregional_web_acl_association" "main" {
   count        = var.associate_alb ? 1 : 0
   resource_arn = var.alb_arn
   web_acl_id   = aws_wafregional_web_acl.wafacl.id
-}
+} 
