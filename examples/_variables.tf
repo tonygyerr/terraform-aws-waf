@@ -69,3 +69,17 @@ variable "environment" {
   type    = string
   default = ""
 }
+
+variable "dead_letter_arn" {
+  type = string
+}
+
+variable "scope" {
+  type    = string // CLOUDFRONT, REGIONAL
+}
+
+variable "allowed_hosts" {
+  description = "The list of allowed host names as specified in HOST header."
+  type        = list(string)
+  default     = []
+}
