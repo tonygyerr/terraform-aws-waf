@@ -138,7 +138,7 @@ resource "aws_iam_policy" "waf_reputation_list_parser" {
       "Sid":"DLQ",
       "Effect":"Allow",
       "Action":["sns:Publish","sqs:SendMessage"],
-      "Resource":"${var.dead_letter_arn}"
+      "Resource":"${aws_sqs_queue.deadletter.arn}"
     }
   ]
 }
