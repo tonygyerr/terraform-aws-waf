@@ -10,4 +10,5 @@ locals {
   name       = replace(var.app_name, "/[^a-zA-Z0-9]/", "") # Sanitize name, waf labels follow different rules
 
   logging_bucket = var.logging_bucket != "" ? var.logging_bucket : "${replace(var.app_name, "/[^a-zA-Z0-9]/", "")}-${terraform.workspace}-edge-logs"
+  excluded_rules = var.excluded_rules
 }

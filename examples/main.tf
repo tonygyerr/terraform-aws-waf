@@ -7,6 +7,7 @@ module "waf" {
   aws_region            = var.aws_region
   dead_letter_arn       = var.dead_letter_arn
   environment           = var.environment
+  excluded_rules        = var.excluded_rules
   profile               = var.profile
   blocked_path_prefixes = ["/admin", "/password"]
   allowed_hosts         = var.allowed_hosts
